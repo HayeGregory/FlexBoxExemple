@@ -55,7 +55,6 @@ aside p {
     padding-left: 0;
 }
 @media (max-width : 640px) {
-
     nav {
         flex-wrap: wrap;
     }
@@ -70,11 +69,8 @@ aside p {
         flex-direction: row;
         align-items: baseline;
     }
-    aside p::after {
-        content: "-";
+    aside p:not(:last-child)::after {
+        content: " -\00a0";
     }
-    aside p:last-child::after {
-        content: '';
-    }
-
+    
 }
